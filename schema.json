@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Settings",
+  "description": "Operator-editable settings for this cloud app.",
+  "type": "object",
+  "required": ["eventNames", "frequencyMs"],
+  "properties": {
+    "eventNames": {
+      "type": "array",
+      "title": "Event names",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1,
+      "default": ["page_view", "click"]
+    },
+    "frequencyMs": {
+      "type": "integer",
+      "title": "Frequency (ms)",
+      "minimum": 100,
+      "default": 2000
+    }
+  }
+}

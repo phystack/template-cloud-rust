@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "type": "cloud_app_event",
+      "description": "Generic cloud-app emitted event. Use eventName to discriminate.",
+      "dimensions": {
+        "eventName": { "type": "string" }
+      },
+      "measures": {
+        "count": { "type": "integer", "default": 1 }
+      }
+    }
+  ]
+}
