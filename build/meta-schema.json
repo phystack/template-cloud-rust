@@ -1,4 +1,0 @@
-{
-  "ui:order": ["eventNames", "frequencyMs"],
-  "eventNames": { "ui:options": { "addable": true, "orderable": true } }
-}
