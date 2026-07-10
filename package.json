@@ -3,5 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "description": "PLACEHOLDER cloud app",
-  "application-type": "cloud-rs"
+  "application-type": "cloud",
+  "scripts": {
+    "schema": "mkdir -p build && cp schema.json meta-schema.json analytics-schema.json manifest.json build/",
+    "build": "bun run schema && cargo build --release",
+    "pub": "bun run build && phy app build create $npm_package_name --dir . --publish"
+  }
 }
