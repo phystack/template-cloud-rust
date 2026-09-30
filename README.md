@@ -13,8 +13,9 @@ just hand-rolled in ~150 lines.
 ## Setup
 
 ```bash
+phy app create my-cloud-app --type cloud   # register (once) — prints one-time credentials
 cp .env.example .env
-# fill in APP_ID, APP_SECRET (from `phy app create`), and PHYHUB_URL
+# fill in APP_ID, APP_SECRET (from the output above), and PHYHUB_URL
 cargo build
 cargo run
 ```
@@ -22,8 +23,7 @@ cargo run
 ## Build & publish
 
 ```bash
-phy app create my-cloud-app --type cloud   # register (once) — prints one-time credentials
-bun run pub                                # cargo build + stage schemas + submit + publish
+bun run pub   # cargo build + stage schemas + submit + publish
 ```
 
 `pub` runs `bun run build && phy app build create $npm_package_name --dir .
